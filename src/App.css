@@ -7,7 +7,7 @@
 .App-logo {
   height: 180px;
   pointer-events: none;
-  margin: -40px auto -40px auto; /* Pulls elements closer */
+  margin: -40px auto -40px auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,30 +17,31 @@
 }
 
 .App-header {
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start; /* Align everything closer to the left */
-  padding: 10px 5%; /* Reduce padding */
+  text-align: left;
+  justify-content: start;
+  padding: 10px 5%;
   color: #1A1A2E;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
   .App-header {
-    padding: 5px 5%; /* Reduce padding further */
-    gap: 10px; /* Reduce space between text and logo */
+    padding: 5px 5%;
+    gap: 10px;
   }
 
   .header-content {
-    font-size: 16px; /* Adjust font size if needed */
-    margin-right: 5px; /* Reduce space between text and logo */
+    font-size: 16px;
+    margin-right: 5px;
   }
 
   .App-logo {
-    height: 30vmin; /* Slightly smaller logo */
-    margin: 0; /* Remove extra margins */
+    height: 30vmin;
+    margin: 0;
   }
 }
 
@@ -62,7 +63,7 @@
   text-align: center;
   color: #1A1A2E;
   font-size: 14px;
-  position: relative; /* Keeps footer at the bottom without overlap */
+  position: relative;
   bottom: 0;
 }
 
