@@ -1,8 +1,11 @@
 {
   "name": "open-pride-map",
   "version": "0.1.0",
+  "homepage": "https://beaulazear.github.io/open-pride-map",
   "private": true,
   "dependencies": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -35,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
