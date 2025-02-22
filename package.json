@@ -4,8 +4,6 @@
   "homepage": "https://beaulazear.github.io/open-pride-map",
   "private": true,
   "dependencies": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -19,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
