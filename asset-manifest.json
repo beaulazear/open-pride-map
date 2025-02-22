@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/open-pride-map/static/css/main.f84257ab.css",
-    "main.js": "/open-pride-map/static/js/main.438f4ab0.js",
+    "main.css": "/open-pride-map/static/css/main.202f098f.css",
+    "main.js": "/open-pride-map/static/js/main.0ea04b0c.js",
     "static/js/453.f3dc6ce5.chunk.js": "/open-pride-map/static/js/453.f3dc6ce5.chunk.js",
-    "static/media/logo.svg": "/open-pride-map/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.png": "/open-pride-map/static/media/logo.46985c32165bfa407c56.png",
     "index.html": "/open-pride-map/index.html",
-    "main.f84257ab.css.map": "/open-pride-map/static/css/main.f84257ab.css.map",
-    "main.438f4ab0.js.map": "/open-pride-map/static/js/main.438f4ab0.js.map",
+    "main.202f098f.css.map": "/open-pride-map/static/css/main.202f098f.css.map",
+    "main.0ea04b0c.js.map": "/open-pride-map/static/js/main.0ea04b0c.js.map",
     "453.f3dc6ce5.chunk.js.map": "/open-pride-map/static/js/453.f3dc6ce5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f84257ab.css",
-    "static/js/main.438f4ab0.js"
+    "static/css/main.202f098f.css",
+    "static/js/main.0ea04b0c.js"
   ]
 }
