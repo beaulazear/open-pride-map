@@ -7,13 +7,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <div className="header-content">
-          <p>Open Pride Maps</p>
-          <a href="https://www.vecteezy.com/free-png/pride" className="credit-link">
-            Pride PNGs by Vecteezy
-          </a>
+          <h1>Open Pride Maps</h1>
+          <p style={{fontSize: '14px'}}>A crowdsourced knowledge-sharing project promoting geospatial awareness of LGBTQ+ history and community.</p>
         </div>
+        <img src={logo} className="App-logo" alt="logo" />
       </header>
       <Map />
       <Footer />
