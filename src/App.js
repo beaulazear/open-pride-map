@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           Open Pride Maps
         </p>
       </header>
+      <Map />
     </div>
   );
 }
