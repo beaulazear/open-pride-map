@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/open-pride-map/static/css/main.40441e95.css",
-    "main.js": "/open-pride-map/static/js/main.5ce356f9.js",
+    "main.js": "/open-pride-map/static/js/main.c6f1140b.js",
     "static/js/453.f3dc6ce5.chunk.js": "/open-pride-map/static/js/453.f3dc6ce5.chunk.js",
     "static/media/logo.png": "/open-pride-map/static/media/logo.46985c32165bfa407c56.png",
     "index.html": "/open-pride-map/index.html",
     "main.40441e95.css.map": "/open-pride-map/static/css/main.40441e95.css.map",
-    "main.5ce356f9.js.map": "/open-pride-map/static/js/main.5ce356f9.js.map",
+    "main.c6f1140b.js.map": "/open-pride-map/static/js/main.c6f1140b.js.map",
     "453.f3dc6ce5.chunk.js.map": "/open-pride-map/static/js/453.f3dc6ce5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40441e95.css",
-    "static/js/main.5ce356f9.js"
+    "static/js/main.c6f1140b.js"
   ]
 }
