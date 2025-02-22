@@ -1,7 +1,7 @@
 .App {
   background: linear-gradient(135deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -48,7 +48,6 @@
   }
 }
 
-/* Dynamic sizing for h1 */
 .App-header h1 {
   font-size: clamp(16px, 4vw, 28px);
   font-weight: bold;
@@ -58,7 +57,6 @@
   padding: 0;
 }
 
-/* Dynamic sizing for paragraph text */
 .App-header p {
   font-size: clamp(12px, 2.5vw, 18px);
   line-height: 1.5;
