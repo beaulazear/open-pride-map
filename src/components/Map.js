@@ -17,15 +17,12 @@ const markerIcon = new L.Icon({
 
 const MapComponent = () => {
     return (
-        <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "500px", width: "100%" }}>
-            {/* Tile Layer (OpenStreetMap) */}
+        <MapContainer center={[39.9612, -82.9988]} zoom={13} style={{ height: "500px", width: "100%" }}>
             <TileLayer
                 url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             />
-
-            {/* Marker */}
-            <Marker position={[51.5, -0.09]} icon={markerIcon}>
+            <Marker position={[39.9612, -82.9988]} icon={markerIcon}>
                 <Popup>Hello world! I am a popup.</Popup>
             </Marker>
         </MapContainer>
