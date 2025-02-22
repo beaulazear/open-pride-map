@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="header-content">
-          <h1>Open Pride Maps</h1>
+          <h1>Open Pride Map</h1>
           <p style={{fontSize: '14px'}}>A crowdsourced knowledge-sharing project promoting geospatial awareness of LGBTQ+ history and community.</p>
         </div>
         <img src={logo} className="App-logo" alt="logo" />
