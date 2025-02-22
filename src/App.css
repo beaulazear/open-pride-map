@@ -62,6 +62,7 @@
 }
 
 .App-footer {
+  background: linear-gradient(135deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
   padding: 15px 0;
   text-align: center;
   color: #1A1A2E;
