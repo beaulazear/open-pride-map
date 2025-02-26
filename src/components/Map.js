@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import LoadingScreen from "./LoadingScreen";
 
-// Fix default marker issue in Leaflet with React
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import markerShadowPng from "leaflet/dist/images/marker-shadow.png";
 
@@ -16,16 +16,67 @@ const markerIcon = new L.Icon({
 });
 
 const MapComponent = () => {
+    const [windmillLocations, setWindmillLocations] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchOverpassData = async () => {
+            const url = "https://overpass-api.de/api/interpreter?data=%5Bout:json%5D%5Btimeout:25%5D;%20nwr%5B%22dhm_id%22%5D;%20out%20geom;";
+
+            try {
+                setLoading(true);
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                const filteredLocations = data.elements
+                    .filter(item => item.lat && item.lon)
+                    .map(item => ({
+                        id: item.id,
+                        lat: item.lat,
+                        lon: item.lon,
+                        name: item.tags?.name || "Unknown Windmill",
+                        description: item.tags?.description || "No description available",
+                    }));
+
+                setWindmillLocations(filteredLocations);
+            } catch (error) {
+                console.error("Error fetching Overpass API data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchOverpassData();
+    }, []);
+
     return (
-        <MapContainer center={[39.9612, -82.9988]} zoom={13} style={{ height: "500px", width: "100%" }}>
-            <TileLayer
-                url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            />
-            <Marker position={[39.9612, -82.9988]} icon={markerIcon}>
-                <Popup>Hello world! I am a popup.</Popup>
-            </Marker>
-        </MapContainer>
+        <div>
+            {loading ? (
+                <LoadingScreen />
+            ) : (
+                <MapContainer center={[52.3676, 4.9041]} zoom={7} style={{ height: "500px", width: "100%" }}>
+                    <TileLayer
+                        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    />
+
+                    {windmillLocations.map(({ id, lat, lon, name, description }) => (
+                        <Marker key={id} position={[lat, lon]} icon={markerIcon}>
+                            <Popup>
+                                <strong>{name}</strong>
+                                <br />
+                                {description}
+                            </Popup>
+                        </Marker>
+                    ))}
+                </MapContainer>
+            )}
+        </div>
     );
 };
 
