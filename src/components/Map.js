@@ -21,7 +21,8 @@ const MapComponent = () => {
 
     useEffect(() => {
         const fetchOverpassData = async () => {
-            const url = "https://overpass-api.de/api/interpreter?data=%5Bout:json%5D%5Btimeout:25%5D;%20nwr%5B%22dhm_id%22%5D;%20out%20geom;";
+            const url =
+                "https://overpass-api.de/api/interpreter?data=%5Bout:json%5D%5Btimeout:25%5D;%20nwr%5B%22dhm_id%22%5D;%20out%20geom;";
 
             try {
                 setLoading(true);
@@ -61,8 +62,8 @@ const MapComponent = () => {
             ) : (
                 <MapContainer center={[52.3676, 4.9041]} zoom={7} style={{ height: "500px", width: "100%" }}>
                     <TileLayer
-                        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                        url={`https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=${process.env.REACT_APP_THUNDERFOREST_API_KEY}`}
+                        attribution='&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>'
                     />
 
                     {windmillLocations.map(({ id, lat, lon, name, description }) => (
